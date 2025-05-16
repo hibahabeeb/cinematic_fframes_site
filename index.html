@@ -1,115 +1,147 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cinematic FFrames</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Watermark Logo -->
-  <div class="watermark">
-    <img src="cinematic fframes logo.jpg" alt="Cinematic FFrames Logo" />
-  </div>
-
-  <!-- Header -->
-  <header>
-    <h1>Welcome to Cinematic FFrames</h1>
-  </header>
-
-  <!-- Viral Video Section -->
-  <section class="video-section">
-    <h2>Our Most Viral Video</h2>
-    <video controls width="720">
-      <source src="fframes viral video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <h2>Customer Testimonials</h2>
-    <div class="testimonial">
-      <p>"Absolutely stunning work! They captured every moment perfectly." – Sarah K.</p>
-    </div>
-    <div class="testimonial">
-      <p>"Cinematic FFrames turned our memories into movie-like magic!" – Amir R.</p>
-    </div>
-  </section>
-
-  <!-- Instagram Section -->
-  <section class="instagram">
-    <h2>Follow Us on Instagram</h2>
-    <p>
-      <a href="https://www.instagram.com/cinematic_fframes" target="_blank">
-        @cinematic_fframes
-      </a>
-    </p>
-  </section>
-
-</body>
-</html>
-✅ style.css
-css
-Copy
-Edit
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
+  background-color: #f8f8f8;
+  color: #222;
   position: relative;
-  color: #333;
 }
 
 header {
   background-color: #111;
   color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem 1rem 1rem;
+  position: relative;
+}
+
+header .header-logo {
+  width: 100px;
+  margin: 0 auto 1rem;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255,255,255,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.watermark-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.watermark-center img {
+  width: 60%;
+  max-width: 500px;
+}
+
+.gallery {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .video-section, .testimonials, .instagram {
   padding: 2rem;
-  margin: 1rem auto;
   max-width: 800px;
+  margin: 2rem auto;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 h2 {
   color: #111;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .testimonial {
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
   padding: 1rem;
-  border-left: 5px solid #111;
+  border-left: 4px solid #333;
   margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.testimonial-video {
+  margin-top: 1rem;
 }
 
 .instagram a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #e1306c;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .instagram a:hover {
   text-decoration: underline;
 }
 
-/* Watermark */
-.watermark {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  opacity: 0.05;
-  z-index: 0;
+.icon {
+  width: 24px;
+  margin-right: 0.5rem;
 }
 
-.watermark img {
-  width: 150px;
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .watermark-center img {
+    width: 90%;
+  }
+
+  .icon {
+    width: 20px;
+  }
+
+  header .header-logo {
+    width: 70px;
+  }
 }
+
