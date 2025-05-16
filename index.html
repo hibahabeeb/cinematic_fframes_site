@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinematic FFrames</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Watermark Logo -->
+  <div class="watermark">
+    <img src="cinematic fframes logo.jpg" alt="Cinematic FFrames Logo" />
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to Cinematic FFrames</h1>
+  </header>
+
+  <!-- Viral Video Section -->
+  <section class="video-section">
+    <h2>Our Most Viral Video</h2>
+    <video controls width="720">
+      <source src="fframes viral video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Customer Testimonials</h2>
+    <div class="testimonial">
+      <p>"Absolutely stunning work! They captured every moment perfectly." – Sarah K.</p>
+    </div>
+    <div class="testimonial">
+      <p>"Cinematic FFrames turned our memories into movie-like magic!" – Amir R.</p>
+    </div>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="instagram">
+    <h2>Follow Us on Instagram</h2>
+    <p>
+      <a href="https://www.instagram.com/cinematic_fframes" target="_blank">
+        @cinematic_fframes
+      </a>
+    </p>
+  </section>
+
+</body>
+</html>
+✅ style.css
+css
+Copy
+Edit
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  position: relative;
+  color: #333;
+}
+
+header {
+  background-color: #111;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.video-section, .testimonials, .instagram {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-left: 5px solid #111;
+  margin-bottom: 1rem;
+}
+
+.instagram a {
+  color: #e1306c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.instagram a:hover {
+  text-decoration: underline;
+}
+
+/* Watermark */
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.watermark img {
+  width: 150px;
+}
